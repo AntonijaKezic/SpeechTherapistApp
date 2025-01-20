@@ -1,0 +1,3 @@
+Ime: tonka
+Prezime: prezime
+Bodovi: 33

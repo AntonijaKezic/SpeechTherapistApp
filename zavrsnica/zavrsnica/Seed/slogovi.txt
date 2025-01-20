@@ -1,0 +1,20 @@
+
+Slogovna rasclamba:
+
+1 kugla
+2 sedam
+3 pravac
+4 tramvaj
+5 kutija
+6 suncokret
+7 vješalica
+
+Slogovno stapanje:
+
+1 va-za
+2 ka-men
+3 pro-zor
+4 vo-æka
+5 lo-pa-ta
+6 vi-li-ca
+7 he-li-ko-pter

@@ -1,0 +1,143 @@
+
+Podaci o ispitaniku:
+
+Ime: tonka
+Prezime: kezic
+Spol: z
+Datum ispitivanja: 20.01.2025
+Dob: 5
+Materinji jezik: hrv
+Ispitivac: mara
+Napomene: nema
+
+Podaci o ispitaniku:
+
+Ime: tonka
+Prezime: kezic
+Spol: z
+Datum ispitivanja: 21.02.2025
+Dob: 5
+Materinji jezik: hr
+Ispitivac: mara
+Napomene: nema
+
+Podaci o ispitaniku:
+
+Ime:  
+Prezime: rhvl4
+Spol: m
+Datum ispitivanja: 21.02.2024
+Dob: 7
+Materinji jezik: bz
+Ispitivac: zg
+Napomene: nz
+
+Podaci o ispitaniku:
+
+Ime:  
+Prezime: hcfeik
+Spol: m
+Datum ispitivanja: 21.02.2024
+Dob: 7
+Materinji jezik: hrv
+Ispitivac: nema
+Napomene: nema
+
+Podaci o ispitaniku:
+
+Ime:  
+Prezime: njanja
+Spol: m
+Datum ispitivanja: 21.02.2024
+Dob: 7
+Materinji jezik: hv
+Ispitivac: nema
+Napomene: nema
+
+Podaci o ispitaniku:
+
+Ime:  
+Prezime: kezic
+Spol: m
+Datum ispitivanja: 21.02.2024
+Dob: 6
+Materinji jezik: gfr
+Ispitivac: grf
+Napomene: brf
+
+Podaci o ispitaniku:
+
+Ime: fcdsjfj
+Prezime: cjewlsd
+Spol: z
+Datum ispitivanja: 21.02.2023
+Dob: 7
+Materinji jezik: brtfd
+Ispitivac: br
+Napomene: br
+
+Podaci o ispitaniku:
+
+Ime: lala
+Prezime: njana
+Spol: z
+Datum ispitivanja: 21.02.2023
+Dob: 5
+Materinji jezik: 6
+Ispitivac: 6
+Napomene: 6
+
+Podaci o ispitaniku:
+
+Ime: petra
+Prezime: ,
+Spol: z
+Datum ispitivanja: 21.02.2024
+Dob: 7
+Materinji jezik: hrv
+Ispitivac: mara
+Napomene: nema
+
+Podaci o ispitaniku:
+
+Ime: ervfg
+Prezime: evrd
+Spol: m
+Datum ispitivanja: 20.01.2024
+Dob: 6
+Materinji jezik: hrv
+Ispitivac: ztgrf
+Napomene: br
+
+Podaci o ispitaniku:
+
+Ime: vfedv
+Prezime: vesdr
+Spol: m
+Datum ispitivanja: 21.02.2023
+Dob: 7
+Materinji jezik: hr
+Ispitivac: brt
+Napomene: bfr
+
+Podaci o ispitaniku:
+
+Ime: lala
+Prezime: mmamam
+Spol: m
+Datum ispitivanja: 10.12.2023
+Dob: 5
+Materinji jezik: brd
+Ispitivac: bvrfd
+Napomene: bved
+
+Podaci o ispitaniku:
+
+Ime: tonka
+Prezime: prezime
+Spol: z
+Datum ispitivanja: 21.02.2023
+Dob: 7
+Materinji jezik: trgfb
+Ispitivac: brd
+Napomene: brdcv

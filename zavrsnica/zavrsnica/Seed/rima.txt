@@ -1,0 +1,19 @@
+Prepoznavanje rime:
+
+1 soba - roba
+2 grana - brana
+3 suma - vina
+4 crkva - mrkva
+5 padobran - knjizara
+6 gljiva - sljiva
+7 vodopad - sudoper
+
+Proizvodnja rime:
+
+1 most
+2 meta
+3 puska
+4 crv
+5 lonac
+6 trava
+7 guma
