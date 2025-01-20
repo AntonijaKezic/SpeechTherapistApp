@@ -7,26 +7,26 @@
 #include "../Headers/task_generation.h"
 #include "../Headers/profile.h"
 
-// Definicija strukture za korisnièki profil
+// Definicija strukture za korisniÃ¨ki profil
 typedef struct {
     char ime[100];
     char prezime[100];
     int bodovi;
 } UserProfile;
 
-// Definicija èvora u binarnom stablu
+// Definicija Ã¨vora u binarnom stablu
 typedef struct TreeNode {
     UserProfile data;
     struct TreeNode* left;
     struct TreeNode* right;
 } TreeNode;
 
-// Funkcija za stvaranje novog èvora
+// Funkcija za stvaranje novog Ã¨vora
 TreeNode* createNode(UserProfile data) {
     TreeNode* newNode = malloc(sizeof(TreeNode));
     if (newNode == NULL) {
         printf("Memory allocation failed!\n");
-        exit(1);  // Izaðite iz programa ako malloc ne uspije
+        exit(1);  // IzaÃ°ite iz programa ako malloc ne uspije
     }
     newNode->data = data;
     newNode->left = NULL;
@@ -34,7 +34,7 @@ TreeNode* createNode(UserProfile data) {
     return newNode;
 }
 
-// Funkcija za umetanje èvora u binarno stablo
+// Funkcija za umetanje Ã¨vora u binarno stablo
 TreeNode* insertNode(TreeNode* root, UserProfile data) {
     if (root == NULL) {
         return createNode(data);
@@ -44,7 +44,7 @@ TreeNode* insertNode(TreeNode* root, UserProfile data) {
     if (data.bodovi < root->data.bodovi) {
         root->left = insertNode(root->left, data);
     }
-    // Ako su bodovi veæi, desno
+    // Ako su bodovi veÃ¦i, desno
     else if (data.bodovi > root->data.bodovi) {
         root->right = insertNode(root->right, data);
     }
@@ -56,18 +56,18 @@ TreeNode* insertNode(TreeNode* root, UserProfile data) {
     return root;
 }
 
-// Funkcija za èitanje podataka iz datoteke i izgradnju stabla
+// Funkcija za Ã¨itanje podataka iz datoteke i izgradnju stabla
 void readFileAndBuildTree(const char* filename, TreeNode** root) {
     FILE* file = fopen(filename, "r");
     if (file == NULL) {
-        printf("Greška pri otvaranju datoteke.\n");
+        printf("GreÅ¡ka pri otvaranju datoteke.\n");
         return;
     }
 
     UserProfile profile;  // Struktura za pohranu podataka o profilu
-    char temp[200];  // Privremena varijabla za èitanje svake linije iz datoteke
+    char temp[200];  // Privremena varijabla za Ã¨itanje svake linije iz datoteke
 
-    // Èitanje podataka
+    // Ãˆitanje podataka
     while (fgets(temp, sizeof(temp), file)) {
         // Provjeravamo je li trenutna linija ime
         if (strncmp(temp, "Ime:", 4) == 0) {
@@ -83,7 +83,7 @@ void readFileAndBuildTree(const char* filename, TreeNode** root) {
         if (strncmp(temp, "Uspjeh u bodovima:", 18) == 0) {
             sscanf(temp, "Uspjeh u bodovima: %d", &profile.bodovi);  // Spremamo bodove korisnika
 
-            // Umetnemo profil u stablo pomoæu funkcije insertNode
+            // Umetnemo profil u stablo pomoÃ¦u funkcije insertNode
             *root = insertNode(*root, profile);
         }
     }
@@ -103,13 +103,13 @@ void sortiranje(TreeNode* root, FILE* file) {
 void rima_test(const char* fileName) {
     FILE* file = fopen(fileName, "r");
     if (!file) {
-        printf("Greška pri otvaranju datoteke: %s\n", fileName);
+        printf("GreÅ¡ka pri otvaranju datoteke: %s\n", fileName);
         return;
     }
 
     char line[100];
 
-    // Èitanje i ispisivanje sadržaja datoteke
+    // Ãˆitanje i ispisivanje sadrÅ¾aja datoteke
     while (fgets(line, sizeof(line), file)) {
         printf("%s", line);
     }
@@ -120,13 +120,13 @@ void rima_test(const char* fileName) {
 void slogovi_test(const char* fileName) {
     FILE* file = fopen(fileName, "r");
     if (!file) {
-        printf("Greška pri otvaranju datoteke: %s\n", fileName);
+        printf("GreÅ¡ka pri otvaranju datoteke: %s\n", fileName);
         return;
     }
 
     char line[100];
 
-    // Èitanje zadataka iz datoteke i ispis
+    // Ãˆitanje zadataka iz datoteke i ispis
     while (fgets(line, sizeof(line), file)) {
         printf("%s", line);
     }
@@ -137,13 +137,13 @@ void slogovi_test(const char* fileName) {
 void fonemi_test(const char* fileName) {
     FILE* file = fopen(fileName, "r");
     if (!file) {
-        printf("Greška pri otvaranju datoteke: %s\n", fileName);
+        printf("GreÅ¡ka pri otvaranju datoteke: %s\n", fileName);
         return;
     }
 
     char line[100];
 
-    // Èitanje i ispisivanje svih zadataka iz datoteke
+    // Ãˆitanje i ispisivanje svih zadataka iz datoteke
     while (fgets(line, sizeof(line), file)) {
         printf("%s", line);
     }
@@ -164,7 +164,7 @@ int unos_bodova() {
         if (unos[i] >= '0' && unos[i] <= '9') {  // Ako je broj
             trenutni_broj = trenutni_broj * 10 + (unos[i] - '0');
         }
-        else if (unos[i] == '+') {  // Ako naiðemo na '+', dodajemo broj u bodove
+        else if (unos[i] == '+') {  // Ako naiÃ°emo na '+', dodajemo broj u bodove
             bodovi += trenutni_broj;
             trenutni_broj = 0;
         }
@@ -174,12 +174,12 @@ int unos_bodova() {
     return bodovi;
 }
 
-// Funkcija za ispisivanje sortiranog popisa iz datoteke i izvoženje u drugu datoteku
+// Funkcija za ispisivanje sortiranog popisa iz datoteke i izvoÅ¾enje u drugu datoteku
 void ispis_popisa(const char* inputFileName, const char* outputFileName) {
     FILE* inputFile = fopen(inputFileName, "r");
     FILE* outputFile = fopen(outputFileName, "w");
     if (!inputFile || !outputFile) {
-        printf("Greška pri otvaranju datoteke: %s\n", inputFileName);
+        printf("GreÅ¡ka pri otvaranju datoteke: %s\n", inputFileName);
         if (inputFile) fclose(inputFile);
         if (outputFile) fclose(outputFile);
         return;
@@ -219,7 +219,7 @@ position kreiranje_profila() {
 
         FILE* file = fopen("popis_ispitanika.txt", "w");
         if (file == NULL) {
-            printf("Greška pri otvaranju datoteke za pisanje.\n");
+            printf("GreÅ¡ka pri otvaranju datoteke za pisanje.\n");
             return NULL;
         }
 
@@ -227,7 +227,7 @@ position kreiranje_profila() {
         fclose(file);
     }
     else {
-        printf("Greška pri unosu profila.\n");
+        printf("GreÅ¡ka pri unosu profila.\n");
         return NULL;
     }
     return newPerson;
@@ -284,7 +284,7 @@ int vjezba_rime() {
             break;  // Izlaz iz petlje ako su bodovi valjani
         }
         else {
-            printf("\nNa ovom zadatku nije moguæe ostvariti navedeni broj bodova. Pokušajte ponovno.\n");
+            printf("\nNa ovom zadatku nije moguÃ¦e ostvariti navedeni broj bodova. PokuÅ¡ajte ponovno.\n");
         }
         brojac++;
     }
@@ -311,7 +311,7 @@ int vjezba_slogova() {
             break;  // Izlaz iz petlje ako su bodovi valjani
         }
         else {
-            printf("\nNa ovom zadatku nije moguæe ostvariti navedeni broj bodova. Pokušajte ponovno.\n");
+            printf("\nNa ovom zadatku nije moguÃ¦e ostvariti navedeni broj bodova. PokuÅ¡ajte ponovno.\n");
         }
     }
 }
@@ -337,7 +337,7 @@ int vjezba_fonema() {
             break;  // Izlaz iz petlje ako su bodovi valjani
         }
         else {
-            printf("\nNa ovom zadatku nije moguæe ostvariti navedeni broj bodova. Pokušajte ponovno.\n");
+            printf("\nNa ovom zadatku nije moguÃ¦e ostvariti navedeni broj bodova. PokuÅ¡ajte ponovno.\n");
         }
     }
 }
@@ -365,6 +365,7 @@ int main() {
 
         if (opcija == 1) {
             do {
+                system("cls");
                 position person = kreiranje_profila();
 
                 printf("\nZadatak 1: Rima\n");
@@ -392,7 +393,7 @@ int main() {
 
                 popisivanje(person, "popis_ispitanika.txt", ukupno_bodova);
 
-                printf("\nŽelite li ispitati još osoba? (da/ne): ");
+                printf("\nÅ½elite li ispitati joÅ¡ osoba? (da/ne): ");
                 fgets(izbor, sizeof(izbor), stdin);
                 izbor[strcspn(izbor, "\n")] = '\0';
 
